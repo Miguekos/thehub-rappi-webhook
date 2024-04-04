@@ -13,7 +13,9 @@ export class AppController {
 
   @Post('/recibe/:store')
   postMessage(@Body() body: any, @Param('store') store: string) {
-    console.log(`Body: ${body} - Param ${store}`);
+    console.log(`Body: ${JSON.stringify(body)} - Param ${store}`);
     return this.appService.postHello(body, store);
+    // console.log('response', response);
+    // return `Order Received from store: ${store}`;
   }
 }

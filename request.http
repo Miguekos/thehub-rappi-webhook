@@ -2,13 +2,85 @@
 GET http://127.0.0.1:3000/ HTTP/1.1
 
 
+###
+GET http://192.241.137.52:3000/orders HTTP/1.1
 
 ###
 POST http://127.0.0.1:3000/orders/recibe/2 HTTP/1.1
 content-type: application/json
 
 {
-    "name": "sample",
-    "time": "Wed, 21 Oct 2015 18:27:50 GMT"
+    
+    "first" : "Miguel",
+    "lastname" : "Rodriguez",
+    "otro" : 123
+    
 }
 
+###
+POST http://192.241.137.52:3000/orders/recibe/2 HTTP/1.1
+content-type: application/json
+
+{
+    
+    "first" : "Miguel",
+    "lastname" : "Rodriguez",
+    "otro" : 123
+    
+}
+
+###
+POST http://127.0.0.1:3000/webhook/v1/orders/recibe/2 HTTP/1.1
+content-type: application/json
+
+{
+    
+    "first" : "Miguel",
+    "lastname" : "Rodriguez",
+    "otro" : 123
+    
+}
+
+
+
+###
+GET https://api.thehub.works/webhook/v1/orders HTTP/1.1
+content-type: application/json
+apikey : NhCo5Yl1cEBHA1XYrA6gQCX49RsYFUgT
+
+###
+GET https://api.thehub.works/orders HTTP/1.1
+
+###
+GET https://api.thehub.works HTTP/1.1
+
+
+###
+GET http://192.241.137.52:3000/webhook/v1/orders HTTP/1.1
+
+
+###
+POST https://api.thehub.works/webhook/v1/orders/recibe/2 HTTP/1.1
+content-type: application/json
+apikey : NhCo5Yl1cEBHA1XYrA6gQCX49RsYFUgT
+
+{
+    
+    "first" : "Miguel",
+    "lastname" : "Rodriguez",
+    "otro" : 123
+}
+
+
+###
+POST https://api.thehub.works/webhook/v1/orders/recibe/{retailer_id} HTTP/1.1
+content-type: application/json
+apikey : NhCo5Yl1cEBHA1XYrA6gQCX49RsYFUgT
+
+{
+    
+    "first" : "Miguel",
+    "lastname" : "Rodriguez",
+    "otro" : 123
+    
+}

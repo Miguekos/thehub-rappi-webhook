@@ -9,10 +9,10 @@ export class AppService {
   }
 
   postHello(data: any, store: string) {
-    console.log('Message recibe', data);
+    console.log('Message Received', data);
     return this.ordersService.send(
-      { cmd: 'add-subscriber', store: store },
-      data,
+      { cmd: 'add-subscriber' },
+      { ordersData: data, store: store },
     );
   }
 }

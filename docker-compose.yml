@@ -1,0 +1,15 @@
+version: '3.3'
+services:
+  app:
+    image: miguekos1233/thehubrappiwebhook:1.0
+    environment:
+      RABBIT_URL: amqps://ntumsuks:FvfKWEs6nLmmA7pW691goxk6ih_1PyPO@toad.rmq.cloudamqp.com/ntumsuks
+    ports:
+      - 3000:3000
+    networks:
+      - traefik-net
+    logging:
+      driver: json-file
+networks:
+  traefik-net:
+    external: true
